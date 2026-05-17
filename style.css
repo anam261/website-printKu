@@ -1,0 +1,307 @@
+/* reset semua elemen */
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+/* Body websiet */
+
+body {
+	font-family:arial,sans-serif;
+	background-image:url(images/baground.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	color:black;
+}
+
+/* header websiete */
+
+header {
+	padding:25px 50px;
+	background:linear-gradient(to right,#4338ca,#6366f1);
+	color:white;
+}
+
+.logo h1 {
+	font-size:38px;
+}
+
+.logo p {
+	font-size:14px;
+}
+
+/*Menu Navigasi*/
+nav{
+	background:rgba(255, 255, 255, 0.7);
+	padding:15px;
+}
+
+nav ul{
+	display:flex;
+	justify-content:center;
+	list-style:none;
+}
+
+nav ul li{
+	margin:0 20px;
+}
+nav ul li a{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+/*container utamanaya */
+
+.container{
+	display:flex;
+	gap:20px;
+	padding:30px;
+}
+	
+
+/*konten utama*/
+
+main {
+	flex:3;
+}
+
+.banner-utama{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	background:linear-gradient(to right,#ede9fe,#ddd6fe);
+	padding:40px;
+	border-radius:20px;
+	margin-bottom:30 px;
+}
+
+.text-banner h2{
+	font-size:45px;
+	color:black;
+	margin-bottom:20px;
+}
+
+.text-banner p{
+	line-height:1.8;
+	margin-bottom:20px;
+}
+
+.tombol-banner button{
+	padding: 12px 25px;
+	border:none;
+	border-radius:10px;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.tombol-banner button:first-child{
+	background:#4f46e5;
+	color:white
+}
+
+.tombol-outline{
+	background:white;
+	border:2px solid blu;
+	color:#4f46e5;
+}
+
+.gambar-banner img{
+	width:420px;
+}
+
+.section-layanan,
+.section-produk{
+	 background-color: rgba(255, 255, 255, 0.5);
+	 padding:30px;
+	 border-radius:20px;
+	 margin-bottom:30px;
+}
+
+.box-layanan{
+	display:grid;
+	grid-template-columns:repeat(2,1fr);
+	gap:20px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+	background-color:white;
+	padding:25px;
+	border-radius:15px;
+	box-shadow:0 5px 10px rgba(0,0,0,0.08);
+}
+
+.card h3{
+	margin-bottom:10px;
+	color:black;
+}
+/* =========================
+   LIST PRODUK
+========================= */
+
+.list-produk{
+	display:flex;
+	gap:20px;
+}
+/* =========================
+   CARD PRODUK
+========================= */
+
+
+.card-produk{
+	flex:1;
+	background-color:white;
+	padding:20px;
+	border-radius:15px;
+	text-align:center;
+}
+.card-produk img{
+	width:100%;
+	height:180px;
+	object-fit:cover;
+	margin-bottom:10px;
+}
+
+.card-produk h3{
+	margin-bottom:10px;
+	color:#4f46e5;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+aside{
+	flex:1;
+}
+
+.box-sidebar{
+	background: #F8F9FA;
+	padding:25px;
+	border-radius:20px;
+	margin-bottom:20px
+}
+
+.box-sidebar h3{
+	margin-bottom:15px;
+	color:black;
+}
+
+/* =========================
+   FOOTER
+========================= */
+ footer{
+	 background: #0F172A;
+	 color:#FFFFFF;
+	 padding:40px;
+ }
+ 
+ .isi-footer{
+	 display:flex;
+	 justify-content:space-between;
+	 margin-bottom:20px;
+ }
+ .copyright{
+	 text-align:center;
+	 border-top:1px solid #4338ca;
+	 padding-top:15px;
+ }
+ 
+ /* =========================
+   SECTION TEXT
+========================= */
+
+.section-text{
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+    color:#475569;
+}
+
+/* =========================
+   UNIVERSAL TABLE
+========================= */
+
+.content-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background-color:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    margin-bottom:20px;
+}
+
+/* Header tabel */
+.content-table th{
+
+    background-color:#4f46e5;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:left;
+
+    font-size:15px;
+}
+
+/* Isi tabel */
+.content-table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #e2e8f0;
+
+    line-height:1.7;
+}
+
+/* Hover tabel */
+.content-table tr:hover{
+
+    background-color:#f8fafc;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media screen and (max-width:768px){
+
+    .content-table{
+
+        font-size:13px;
+    }
+
+    .content-table th,
+    .content-table td{
+
+        padding:10px;
+    }
+
+}
+	 
+
+	 
+
+	
+	
+	
+	
+
+
+	
