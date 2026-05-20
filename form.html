@@ -17,7 +17,7 @@
 		<header>
 			<div class="logo">
 				<h1>PrintKu</h1>
-				<p>Cetak apa saja,Kualitas Juara!</p>
+				<p>Cetak apa saja, Kualitas Juara!</p>
 			</div>
 		</header>
 		
@@ -31,16 +31,118 @@
 					<a href="index.html">Beranda</a>
 				</li>
 				<li>
-					<a href="form.html">order</a>
+					<a href="form.html">Order</a>
 				</li>
 				<li>
-					<a href="evaluation.html">evaluation</a>
+					<a href="evaluation.html">Evaluation</a>
 				</li>
 				<li>
 					<a href="About us.html">About us</a>
 				</li>
 			</ul>		
 		</nav>
+
+		<div>
+			<main>
+				<section>
+					<h2>Formulir Pemesanan Cetak</h2>
+					<p>Atur pesanan anda disini. Harga akan otomatis terhitung</p>
+				</section>
+
+				<div>
+					<strong>Pesanan Diterima!</strong>
+					Silahkan cek email Anda untuk intruksi pembayaran.
+				</div>
+
+				<form>
+					<div>
+						<label>Nama pelanggan:</label>
+						<input type="text" id="custName" name="custName" placeholder="Masukkan nama Anda">
+						<span id="errName" class="error-msg"></span>
+					</div>
+
+					<div>
+						<label>Nomor Telepon:</label>
+						<input type="text" id="NoTel" name="NoTel" placeholder="Masukkan nomor Anda">
+						<span id="errNoTel" class="error-msg"></span>
+					</div>
+
+					<div>
+						<label>Email:</label>
+						<input type="text" id="Email" placeholder="email@example.com">
+						<span id="errEmail" class="error-msg"></span>
+					</div>
+
+					<div>
+						<label>Jenis Cetakan:</label>
+						<select name="jenisCetak" id="jenisCetak">
+							<option value="">Pilih Jenis</option>
+							<option value="5000">Stiker (Rp 5.000/pcs)</option>
+							<option value="20000">Banner (Rp 20.000/pcs)</option>
+							<option value="10000">Poster (Rp 10.000/pcs)</option>
+							<option value="25000">Kartu Nama (Rp 25.000/pcs)</option>
+							<option value="15000">Laminasi Khusus (Rp 15.000/lembar)</option>
+						</select>
+						<span id="errJenis" class="error-msg"></span>
+					</div>
+
+					<div>
+						<label>Ukuran Cetakan:</label>
+						<select name="ukurancetak" id="ukuranCetak">
+							<option value="">Pilih Ukuran</option>
+							<option value="1">3x3 cm (Harga Normal)</option>
+							<option value="2">A4 (2x Harga Normal)</option>
+							<option value="3">A3 (3x Harga Normal)</option>
+							<option value="5">1 Meter (5x Harga Normal)</option>
+							<option value="1.5">Custom (1.5x Harga Normal)</option>
+						</select>
+						<span id="errUkuran" class="error-msg"></span>
+					</div>
+				</form>
+			</main>
+		</div>
+
+		<!-- =========================
+			FOOTER WEBSITE
+		========================== -->
+		
+		<footer>
+			<div class="isi-footer">
+				<div>
+					<h3>PrintKu</h3>
+					
+					<p>
+						Solusi cetak modern cepat dan berkualitas.
+					</p>
+				</div>
+				
+				
+				<!-- Menu -->
+				<div>
+					<h3>Menu</h3>
+
+					<p>Beranda</p>
+
+					<p>Order</p>
+
+					<p>About Us</p>
+				</div>
+
+				<!-- Kontak -->
+				<div>
+					<h3>Kontak</h3>
+
+					<p>printku@gmail.com</p>
+
+					<p>0812-3456-7890</p>
+				</div>
+			</div>
+
+			<!-- Copyright -->
+			<p class="copyright">
+				© 2026 PrintKu. All Rights Reserved.
+			</p>
+		</footer>
 	</body>
 </html>
 
