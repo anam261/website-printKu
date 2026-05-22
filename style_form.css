@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+}
+
+.form-section {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.form-section h2 {
+    color: #1e1b4b;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.form-section p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    background-color: #fff;
+}
+
+.radio-group, .checkbox-group{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.radio-group label, .checkbox-group label{
+    display: inline;
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.radio-group input, .checkbox-group input{
+    margin-right: 5px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.price-box {
+    background-color: #e0e7ff;
+    padding: 20px;
+    border: 2px dashed #7c3aed;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.price-box h3{
+    color: #1e1b4b;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.price-box .total-harga{
+    font-size: 32px;
+    font-weight: bold;
+    color: #7c3aed;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #7c3aed;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #6d28d9;
+}
