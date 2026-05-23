@@ -104,14 +104,14 @@
 
 						<!-- 6. Input Jumlah Pesanan -->
 						<div class="form-group">
-							<label for="">Jumlah Pesanan:</label>
+							<label for="jumlah">Jumlah Pesanan:</label>
 							<input type="text" id="jumlah" name="jumlah" placeholder="Contoh: 50" oninput="hitungTotal()">
 							<span id="errJumlah" class="error-msg"></span>
 						</div>
 
 						<!-- 7. Input File -->
 						<div class="form-group">
-							<label for="">Upload Desain Anda (.jpg, .png, .pdf):</label>
+							<label for="jumlah">Upload Desain Anda (.jpg, .png, .pdf):</label>
 							<input type="file" id="File" name="File">
 							<span id="errFile" class="error-msg"></span>
 						</div>
@@ -135,20 +135,20 @@
 						<div class="form-group">
 							<label>Tambahan Fitur (Opsional)</label>
 							<div class="checkbox-group" onchange="hitungTotal()">
-								<input type="checkbox" name="fitur2" id="fitur-extra" value="1000">
-								<label for="fitur2">Waterproof (+Rp 1.000)</label><br><br>
+								<input type="checkbox" name="fitur1" id="fitur1" value="1000">
+								<label for="fitur1">Waterproof (+Rp 1.000)</label><br><br>
 
-								<input type="checkbox" name="fitur2" id="fitur-extra" value="500">
+								<input type="checkbox" name="fitur2" id="fitur2" value="500">
 								<label for="fitur2">Potong Custom (+Rp 500)</label><br><br>
 
-								<input type="checkbox" name="fitur3" id="fitur-extra" value="5000">
+								<input type="checkbox" name="fitur3" id="fitur3" value="5000">
 								<label for="fitur3">Fast Printing (+Rp 5.000)</label>
 							</div>
 						</div>
 
 						<!-- 10. Textarea: Catatan Tambahan -->
 						<div class="form-group">
-							<label for="">Catatan Tambahan:</label>
+							<label>Catatan Tambahan:</label>
 							<textarea name="catatan" id="catatan" rows="4" placeholder=""></textarea>
 						</div>
 
