@@ -14,6 +14,7 @@
 ========================= */
 
 .content-table{
+<<<<<<< HEAD
     width:100%;
     border-collapse:collapse;
     background-color:white;
@@ -33,25 +34,65 @@
 }
 
 
+=======
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background-color:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    margin-bottom:20px;
+}
+
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
 /* Header tabel */
 .content-table th{
 
     background-color:#4f46e5;
+<<<<<<< HEAD
     color:white;
     padding:15px;
     text-align:left;
+=======
+
+    color:white;
+
+    padding:15px;
+
+    text-align:left;
+
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
     font-size:15px;
 }
 
 /* Isi tabel */
 .content-table td{
+<<<<<<< HEAD
     padding:15px;
     border-bottom:1px solid #e2e8f0;
+=======
+
+    padding:15px;
+
+    border-bottom:1px solid #e2e8f0;
+
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
     line-height:1.7;
 }
 
 /* Hover tabel */
 .content-table tr:hover{
+<<<<<<< HEAD
+=======
+
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
     background-color:#f8fafc;
 }
 

@@ -8,7 +8,11 @@
     background-color: white;
     padding: 35px;
     border-radius: 15px;
+<<<<<<< HEAD
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+=======
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
 }
 
 .form-section h2 {

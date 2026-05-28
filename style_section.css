@@ -91,7 +91,11 @@ aside{
 ========================= */
  footer{
 	 background: #0F172A;
+<<<<<<< HEAD
 	 color:#ffffff;
+=======
+	 color:#FFFFFF;
+>>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
 	 padding:40px;
  }
  
