@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device=width, initial-scele=1.0">
+		<title>printKu - Order</title>
+		
+		<link rel="stylesheet" href="style_section.css">
+		<link rel="stylesheet" href="style_form.css">
+	</head>	
+	<body>
+		
+		<!--=================
+			header websiete
+		=====================-->
+		
+		<header>
+			<div class="logo">
+				<h1>PrintKu</h1>
+				<p>Cetak apa saja,Kualitas Juara!</p>
+			</div>
+		</header>
+		
+		<!--=================
+			Menu navigasi
+		=====================-->
+		
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Beranda</a>
+				</li>
+				<li>
+					<a href="form.html">order</a>
+				</li>
+				<li>
+					<a href="evaluation.html">evaluation</a>
+				</li>
+				<li>
+					<a href="About_us.html">About us</a>
+				</li>
+			</ul>		
+		</nav>
+		<div class="container">
+			<main>
+				<section class="form-section">
+					<h2>Formulir Pemesanan Cetak</h2>
+					<p>Atur pesanan anda disini. Harga akan otomatis terhitung</p>
+
+					<div id="successBox" class="success-box">
+						<strong>Pesanan Diterima!</strong>
+						Silahkan cek email Anda untuk intruksi pembayaran.
+					</div>
+
+					<form id="orderForm">
+						<!-- 1. Input Nama Pelanggan -->
+						<div class="form-group">
+							<label>Nama pelanggan:</label>
+							<input type="text" id="custName" name="custName" placeholder="Masukkan nama Anda">
+							<span id="errName" class="error-msg"></span>
+						</div>
+
+						<!-- 2. Input Nomor Telepon -->
+						<div class="form-group">
+							<label>Nomor Telepon:</label>
+							<input type="text" id="custNotel" name="custNotel" placeholder="Masukkan nomor Anda">
+							<span id="errNotel" class="error-msg"></span>
+						</div>
+
+						<!-- 3. Input Email -->
+						<div class="form-group">
+							<label>Email:</label>
+							<input type="text" id="custEmail" placeholder="email@example.com">
+							<span id="errEmail" class="error-msg"></span>
+						</div>
+
+						<!-- 4. Dropdown: Jenis Cetakan -->
+						<div class="form-group">
+							<label>Jenis Cetakan:</label>
+							<select name="jenisCetak" id="jenisCetak" onchange="hitungTotal()">
+								<option value="">Pilih Jenis</option>
+								<option value="5000">Stiker (Rp 5.000/pcs)</option>
+								<option value="20000">Banner (Rp 20.000/pcs)</option>
+								<option value="10000">Poster (Rp 10.000/pcs)</option>
+								<option value="25000">Kartu Nama (Rp 25.000/pcs)</option>
+								<option value="15000">Laminasi Khusus (Rp 15.000/lembar)</option>
+							</select>
+							<span id="errJenis" class="error-msg"></span>
+						</div>
+
+						<!-- 5. Dropdown: Ukuran Cetakan -->
+						<div class="form-group">
+							<label>Ukuran Cetakan:</label>
+							<select name="ukuranCetak" id="ukuranCetak" onchange="hitungTotal()">
+								<option value="">Pilih Ukuran</option>
+								<option value="1">3x3 cm (Harga Normal)</option>
+								<option value="2">A4 (2x Harga Normal)</option>
+								<option value="3">A3 (3x Harga Normal)</option>
+								<option value="5">1 Meter (5x Harga Normal)</option>
+								<option value="1.5">Custom (1.5x Harga Normal)</option>
+							</select>
+							<span id="errUkuran" class="error-msg"></span>
+						</div>
+
+						<!-- 6. Input Jumlah Pesanan -->
+						<div class="form-group">
+							<label for="jumlah">Jumlah Pesanan:</label>
+							<input type="text" id="jumlah" name="jumlah" placeholder="Contoh: 50" oninput="hitungTotal()">
+							<span id="errJumlah" class="error-msg"></span>
+						</div>
+
+						<!-- 7. Input File -->
+						<div class="form-group">
+							<label for="jumlah">Upload Desain Anda (.jpg, .png, .pdf):</label>
+							<input type="file" id="File" name="File">
+							<span id="errFile" class="error-msg"></span>
+						</div>
+
+						<!-- 8. Radion Button: Pilihan Laminasi -->
+						<div class="form-group">
+							<label>Pilihan Laminasi (Opsional +Rp 2.000)</label>
+							<div class="radio-group" onchange="hitungTotal()">
+								<input type="radio" name="laminasi" id="lamGlossy" value="2000">
+								<label for="lamGlossy">Glossy (Mengkilap)</label>
+
+								<input type="radio" name="laminasi" id="lamDoff" value="2000">
+								<label for="lamDoff">Doff (Matte)</label>
+
+								<input type="radio" name="laminasi" id="lamNone" value="0" checked>
+								<label for="lamNone">Tanpa Laminasi</label>
+							</div>
+						</div>
+
+						<!-- 9. Checkbox: Tambahan Fitur -->
+						<div class="form-group">
+							<label>Tambahan Fitur (Opsional)</label>
+							<div class="checkbox-group" onchange="hitungTotal()">
+								<input type="checkbox" name="fitur1" id="fitur1" value="1000">
+								<label for="fitur1">Waterproof (+Rp 1.000)</label><br><br>
+
+								<input type="checkbox" name="fitur2" id="fitur2" value="500">
+								<label for="fitur2">Potong Custom (+Rp 500)</label><br><br>
+
+								<input type="checkbox" name="fitur3" id="fitur3" value="5000">
+								<label for="fitur3">Fast Printing (+Rp 5.000)</label>
+							</div>
+						</div>
+
+						<!-- 10. Textarea: Catatan Tambahan -->
+						<div class="form-group">
+							<label>Catatan Tambahan:</label>
+							<textarea name="catatan" id="catatan" rows="4" placeholder=""></textarea>
+						</div>
+
+						<!-- 11. Total Harga -->
+						<div class="price-box">
+							<h3>Total Harga:</h3>
+							<div class="total-harga" id="tampilHarga">Rp 0</div>
+						</div>
+
+						<!-- 12. Tombol Submit -->
+						<button type="submit" class="btn-submit">Pesan Sekarang</button>
+					</form>
+				</section>
+			</main>
+
+			<aside>
+				<div class="box-sidebar">
+					<h3>Info PrintKu</h3>
+					
+					<p>Jam Operasi</p>
+					<br>
+					<p>Alamat:</p>
+					<p>
+						JL. Raya Telang No. 35 Bangkalan
+					</p>
+				</div>
+					<!-- Kontak -->
+				<div class="box-sidebar">
+					<h3>Kontak</h3>
+					<p>printku@gmail.com</p>
+					<p>0812-3456-7890</p>
+					<p>@printku.id</p>
+				</div>
+			</aside>
+		</div>
+
+		<!-- =========================
+			FOOTER WEBSITE
+		========================== -->
+		
+		<footer>
+			<div class="isi-footer">
+				<div>
+					<h3>PrintKu</h3>
+					<p>
+						Solusi cetak modern cepat dan berkualitas.
+					</p>
+				</div>
+				
+				<!-- Menu -->
+				<div>
+					<h3>Menu</h3>
+					<p>Beranda</p>
+					<p>Order</p>
+					<p>About Us</p>
+				</div>
+
+				<!-- Kontak -->
+				<div>
+					<h3>Kontak</h3>
+					<p>printku@gmail.com</p>
+					<p>0812-3456-7890</p>
+				</div>
+			</div>
+
+			<!-- Copyright -->
+			<p class="copyright">
+				© 2026 PrintKu. All Rights Reserved.
+			</p>
+		</footer>
+
+		<!-- Panggil Script Logika & Perhitungan -->
+		<script src="script.js"></script>
+	</body>
+</html>
+
+	

@@ -1,0 +1,120 @@
+/* reset semua elemen */
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+/* Body websiet */
+
+body {
+	font-family:arial,sans-serif;
+	background-image:url(images/baground.jpg);
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+	color:black;
+}
+
+/*container utamanaya */
+
+.container{
+	display:flex;
+	gap:20px;
+	padding:30px;
+}
+	
+/* header websiete */
+
+header {
+	padding:25px 50px;
+	background:linear-gradient(to right,#4338ca,#6366f1);
+	color:white;
+}
+
+.logo h1 {
+	font-size:38px;
+}
+
+.logo p {
+	font-size:14px;
+}
+
+/*Menu Navigasi*/
+nav{
+	background:rgba(255, 255, 255, 0.7);
+	padding:15px;
+}
+
+nav ul{
+	display:flex;
+	justify-content:center;
+	list-style:none;
+}
+
+nav ul li{
+	margin:0 20px;
+}
+nav ul li a{
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+}
+
+main {
+	flex:3;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+aside{
+	flex:1;
+}
+
+.box-sidebar{
+	background: #F8F9FA;
+	padding:25px;
+	border-radius:20px;
+	margin-bottom:20px
+}
+
+.box-sidebar h3{
+	margin-bottom:15px;
+	color:black;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+ footer{
+	 background: #0F172A;
+	 color:#ffffff;
+	 padding:40px;
+ }
+ 
+ .isi-footer{
+	 display:flex;
+	 justify-content:space-between;
+	 margin-bottom:20px;
+ }
+ .copyright{
+	 text-align:center;
+	 border-top:1px solid #4338ca;
+	 padding-top:15px;
+ }
+ 
+ /* =========================
+   SECTION TEXT
+========================= */
+
+.section-text{
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+    color:#475569;
+}
