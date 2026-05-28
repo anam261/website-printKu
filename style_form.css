@@ -1,166 +1,204 @@
+/* ==========================================
+   1. LAYOUT UTAMA & KONTAINER
+   ========================================== */
+
+/* Kontainer utama pembungkus form */
 .container {
-    display: flex;
-    gap: 20px;
-    padding: 30px;
+    display: flex;         /* Mengaktifkan flexbox agar elemen di dalamnya bisa berjejer (jika ada beberapa section) */
+    gap: 20px;             /* Memberikan jarak 20px antar elemen di dalam kontainer */
+    padding: 30px;         /* Memberikan ruang dalam sebesar 30px di sekeliling kontainer */
 }
 
+/* Kotak putih pembungkus formulir */
 .form-section {
-    background-color: white;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    background-color: white;                     /* Warna latar belakang putih */
+    padding: 35px;                               /* Ruang dalam kotak formulir sebesar 35px */
+    border-radius: 15px;                         /* Membuat sudut kotak melengkung (rounded) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);   /* Memberikan efek bayangan halus di bawah kotak */
 }
 
+/* ==========================================
+   2. ELEMEN TEKS DI DALAM FORM
+   ========================================== */
+
+/* Judul utama formulir */
 .form-section h2 {
-    color: #1e1b4b;
-    margin-bottom: 15px;
-    font-size: 28px;
+    color: #1e1b4b;        /* Warna teks ungu gelap/indigo tua */
+    margin-bottom: 15px;   /* Jarak antara judul dengan elemen di bawahnya */
+    font-size: 28px;       /* Ukuran font judul */
 }
 
+/* Deskripsi atau paragraf di bawah judul */
 .form-section p {
-    margin-bottom: 25px;
-    color: #555;
+    margin-bottom: 25px;   /* Jarak antara paragraf dengan input pertama di bawahnya */
+    color: #555;           /* Warna teks abu-abu gelap agar nyaman dibaca */
 }
 
+/* Baris pembungkus label dan input */
 .form-group {
-    margin: 20px;
+    margin: 20px;          /* Memberikan jarak luar sebesar 20px di semua sisi */
 }
 
+/* Label penunjuk input (misal: "Nama Lengkap", "Email") */
 .form-group label {
-    margin-bottom: 8px;
-    display: block;
-    font-weight: bold;
-    color: #333;
+    margin-bottom: 8px;    /* Jarak antara label dengan kotak input di bawahnya */
+    display: block;        /* Mengubah label menjadi block agar input turun ke bawahnya */
+    font-weight: bold;     /* Membuat teks label menjadi tebal */
+    color: #333;           /* Warna teks label hitam keabu-abuan */
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="number"],
-.form-group input[type="tel"],
-.form-group select,
-.form-group textarea,
-.form-group input[type="file"] {
+/* ==========================================
+   3. STYLING INPUT FIELD (Komentar per Baris)
+   ========================================== */
 
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    font-size: 15px;
-    transition: 0.3s;
+/* Mengatur tampilan dasar semua elemen form */
+.form-group input[type="text"],   /* Target untuk input teks biasa (misal: Nama) */
+.form-group input[type="email"],  /* Target untuk input format email */
+.form-group input[type="number"], /* Target untuk input khusus angka (misal: Jumlah) */
+.form-group input[type="tel"],    /* Target untuk input nomor telepon */
+.form-group select,               /* Target untuk menu pilihan dropdown */
+.form-group textarea,             /* Target untuk kotak teks panjang (misal: Alamat) */
+.form-group input[type="file"] {  /* Target untuk tombol unggah/upload file */
+
+    width: 100%;                  /* Membuat lebar input penuh 100% mengikuti kontainernya */
+    padding: 12px;                /* Ruang dalam kotak input agar teks tidak menempel ke garis tepi */
+    border: 1px solid #ccc;       /* Garis tepi tipis berwarna abu-abu */
+    border-radius: 10px;          /* Membuat sudut kotak input melengkung halus */
+    background-color: #f9f9f9;    /* Warna latar belakang input abu-abu sangat muda */
+    font-size: 15px;              /* Ukuran teks di dalam input */
+    transition: 0.3s;             /* Animasi halus selama 0.3 detik saat warna berubah/saat fokus */
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="number"]:focus,
-.form-group input[type="tel"]:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+/* Efek yang terjadi ketika elemen form sedang diklik atau diisi (Focus) */
+.form-group input[type="text"]:focus,   /* Efek focus untuk input teks biasa */
+.form-group input[type="email"]:focus,  /* Efek focus untuk input email */
+.form-group input[type="number"]:focus, /* Efek focus untuk input angka */
+.form-group input[type="tel"]:focus,    /* Efek focus untuk input nomor telepon */
+.form-group select:focus,               /* Efek focus untuk menu dropdown */
+.form-group textarea:focus {            /* Efek focus untuk kotak teks panjang */
 
-    outline: none;
-    border-color: #7c3aed;
-    background-color: #fff;
+    outline: none;                /* Menghilangkan garis biru/hitam tebal bawaan asli browser */
+    border-color: #7c3aed;        /* Mengubah warna garis tepi menjadi ungu saat diklik */
+    background-color: #fff;       /* Mengubah latar belakang menjadi putih bersih agar fokus */
 }
 
+/* ==========================================
+   4. STYLING RADIO BUTTON & CHECKBOX
+   ========================================== */
+
+/* Kotak pembungkus pilihan radio atau checkbox */
 .radio-group,
 .checkbox-group {
-
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    padding: 15px;                /* Ruang dalam kotak pilihan */
+    border: 1px solid #ccc;       /* Garis tepi kotak pilihan */
+    border-radius: 10px;          /* Sudut kotak dibuat melengkung */
+    background-color: #f9f9f9;    /* Latar belakang kotak abu-abu muda */
 }
 
+/* Label teks di sebelah bulat/kotak pilihan */
 .radio-group label,
 .checkbox-group label {
-
-    display: inline;
-    font-weight: normal;
-    margin-right: 15px;
-    cursor: pointer;
+    display: inline;              /* Membuat label sejajar ke samping dengan pilihan lainnya */
+    font-weight: normal;          /* Ketebalan teks normal (tidak tebal) */
+    margin-right: 15px;           /* Jarak antar pilihan ke kanan */
+    cursor: pointer;              /* Mengubah ikon mouse menjadi tangan penunjuk saat diarahkan ke teks */
 }
 
+/* Bulatan/kotak check-nya itu sendiri */
 .radio-group input,
 .checkbox-group input {
-
-    margin-right: 5px;
-    transform: scale(1.2);
-    cursor: pointer;
+    margin-right: 5px;            /* Jarak antara bulatan/kotak dengan teks di sebelahnya */
+    transform: scale(1.2);        /* Memperbesar ukuran bulatan/kotak bawaan sebesar 1.2 kali lipat */
+    cursor: pointer;              /* Mengubah ikon mouse menjadi tangan penunjuk */
 }
 
+/* ==========================================
+   5. KOTAK INFORMASI HARGA & TOMBOL SUBMIT
+   ========================================== */
+
+/* Kotak penampil total harga */
 .price-box {
-
-    background-color: #e0e7ff;
-    padding: 20px;
-    border: 2px dashed #7c3aed;
-    border-radius: 12px;
-    text-align: center;
-    margin-bottom: 25px;
+    background-color: #e0e7ff;    /* Warna latar belakang biru muda cerah */
+    padding: 20px;                /* Ruang dalam kotak harga */
+    border: 2px dashed #7c3aed;   /* Garis tepi putus-putus berwarna ungu */
+    border-radius: 12px;          /* Sudut kotak melengkung */
+    text-align: center;           /* Membuat semua teks di dalamnya berada di tengah */
+    margin-bottom: 25px;          /* Jarak bawah kotak harga ke elemen berikutnya */
 }
 
+/* Judul kecil di dalam kotak harga */
 .price-box h3 {
-
-    color: #1e1b4b;
-    font-size: 18px;
-    margin-bottom: 15px;
+    color: #1e1b4b;               /* Warna teks indigo tua */
+    font-size: 18px;              /* Ukuran font judul harga */
+    margin-bottom: 15px;          /* Jarak bawah judul harga ke angka nominal */
 }
 
+/* Angka nominal total harga */
 .price-box .total-harga {
-
-    font-size: 32px;
-    font-weight: bold;
-    color: #7c3aed;
+    font-size: 32px;              /* Ukuran font angka harga dibuat besar */
+    font-weight: bold;            /* Angka dibuat tebal */
+    color: #7c3aed;               /* Warna angka ungu cerah agar mencolok */
 }
 
+/* Tombol kirim/submit form */
 .btn-submit {
-
-    width: 100%;
-    background-color: #7c3aed;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+    width: 100%;                  /* Lebar tombol penuh 100% */
+    background-color: #7c3aed;    /* Warna dasar tombol ungu */
+    color: white;                 /* Warna teks tombol putih */
+    border: none;                 /* Menghilangkan garis tepi bawaan tombol */
+    padding: 15px;                /* Ruang dalam tombol agar terlihat tebal/proporsional */
+    border-radius: 8px;           /* Sudut tombol agak melengkung */
+    font-size: 18px;              /* Ukuran teks tombol */
+    font-weight: bold;            /* Teks tombol tebal */
+    cursor: pointer;              /* Mengubah ikon mouse menjadi tangan saat diarahkan ke tombol */
+    transition: 0.3s;             /* Animasi transisi halus saat hover */
 }
 
+/* Efek ketika tombol submit didekati mouse (hover) */
 .btn-submit:hover {
-
-    background-color: #6d28d9;
+    background-color: #6d28d9;    /* Mengubah warna ungu menjadi sedikit lebih gelap */
 }
 
+/* ==========================================
+   6. NOTIFIKASI ERROR & BERHASIL (VALIDASI)
+   ========================================== */
+
+/* Pesan error/gagal validasi */
 .error-msg {
-
-    color: #ef4444;
-    font-size: 13px;
-    margin-top: 5px;
-    display: block;
-    font-weight: bold;
+    color: #ef4444;               /* Warna teks merah peringatan */
+    font-size: 13px;              /* Ukuran teks pesan error agak kecil */
+    margin-top: 5px;              /* Jarak atas agar tidak terlalu menempel dengan input */
+    display: block;               /* Membuat pesan error turun ke bawah elemen input */
+    font-weight: bold;            /* Teks error dibuat tebal agar terlihat jelas */
 }
 
+/* Kotak notifikasi sukses */
 .success-box {
-
-    background-color: #dcfce7;
-    border: 1px solid #22c55e;
-    color: #15803d;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin-bottom: 20px;
-    display: none;
+    background-color: #dcfce7;    /* Latar belakang hijau muda */
+    border: 1px solid #22c55e;    /* Garis tepi hijau */
+    color: #15803d;               /* Warna teks hijau tua */
+    padding: 15px;                /* Ruang dalam kotak sukses */
+    border-radius: 8px;           /* Sudut kotak sukses melengkung */
+    text-align: center;           /* Teks berada di tengah */
+    margin-bottom: 20px;          /* Jarak bawah kotak sukses */
+    display: none;                /* Sembunyikan kotak secara default (baru muncul via JavaScript jika sukses) */
 }
 
-/* RESPONSIVE */
-@media screen and (max-width:768px){
+/* ==========================================
+   7. RESPONSIVE DESIGN (MOBILE LAYOUT)
+   ========================================== */
 
-    .container{
-        flex-direction: column;
-        padding: 15px;
+/* Aturan CSS khusus untuk layar HP/Tablet dengan lebar maksimal 768px */
+@media screen and (max-width: 768px) {
+
+    /* Mengubah susunan kontainer utama */
+    .container {
+        flex-direction: column;   /* Mengubah susunan elemen di dalam container menjadi berbaris ke bawah (vertikal) */
+        padding: 15px;            /* Memperkecil ruang dalam kontainer di layar HP */
     }
 
-    .form-section{
-        padding: 20px;
+    /* Mengubah ruang dalam kotak form di layar HP */
+    .form-section {
+        padding: 20px;            /* Mengurangi padding dari 35px menjadi 20px agar hemat ruang layar */
     }
 }
