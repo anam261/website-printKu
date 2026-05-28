@@ -4,96 +4,49 @@
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     margin: 20px;
-    display:flex;
-	gap:20px;
+    display: flex;
+    gap: 20px;
 }
-
 
 /* =========================
    UNIVERSAL TABLE
 ========================= */
 
 .content-table{
-<<<<<<< HEAD
-    width:100%;
-    border-collapse:collapse;
-    background-color:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    margin-bottom:20px;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
 }
 
 .section-text{
-
-    margin-bottom:20px;
-
-    line-height:1.8;
-
-    color:#475569;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #475569;
 }
 
-
-=======
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    background-color:white;
-
-    border-radius:15px;
-
-    overflow:hidden;
-
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-
-    margin-bottom:20px;
-}
-
->>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
 /* Header tabel */
 .content-table th{
-
-    background-color:#4f46e5;
-<<<<<<< HEAD
-    color:white;
-    padding:15px;
-    text-align:left;
-=======
-
-    color:white;
-
-    padding:15px;
-
-    text-align:left;
-
->>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
-    font-size:15px;
+    background-color: #4f46e5;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
 }
 
 /* Isi tabel */
 .content-table td{
-<<<<<<< HEAD
-    padding:15px;
-    border-bottom:1px solid #e2e8f0;
-=======
-
-    padding:15px;
-
-    border-bottom:1px solid #e2e8f0;
-
->>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
-    line-height:1.7;
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    line-height: 1.7;
 }
 
 /* Hover tabel */
 .content-table tr:hover{
-<<<<<<< HEAD
-=======
-
->>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
-    background-color:#f8fafc;
+    background-color: #f8fafc;
 }
 
 /* =========================
@@ -102,15 +55,16 @@
 
 @media screen and (max-width:768px){
 
-    .content-table{
+    .about-container{
+        flex-direction: column;
+    }
 
-        font-size:13px;
+    .content-table{
+        font-size: 13px;
     }
 
     .content-table th,
     .content-table td{
-
-        padding:10px;
+        padding: 10px;
     }
-
 }

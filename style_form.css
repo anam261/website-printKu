@@ -8,11 +8,7 @@
     background-color: white;
     padding: 35px;
     border-radius: 15px;
-<<<<<<< HEAD
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-=======
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
->>>>>>> 062761f2d3f3e041e657c8e107e3472fcdf6ba63
 }
 
 .form-section h2 {
@@ -38,9 +34,13 @@
 }
 
 .form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="tel"],
 .form-group select,
 .form-group textarea,
 .form-group input[type="file"] {
+
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -51,34 +51,45 @@
 }
 
 .form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="tel"]:focus,
 .form-group select:focus,
 .form-group textarea:focus {
+
     outline: none;
     border-color: #7c3aed;
     background-color: #fff;
 }
 
-.radio-group, .checkbox-group{
+.radio-group,
+.checkbox-group {
+
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
 }
 
-.radio-group label, .checkbox-group label{
+.radio-group label,
+.checkbox-group label {
+
     display: inline;
     font-weight: normal;
     margin-right: 15px;
     cursor: pointer;
 }
 
-.radio-group input, .checkbox-group input{
+.radio-group input,
+.checkbox-group input {
+
     margin-right: 5px;
     transform: scale(1.2);
     cursor: pointer;
 }
 
 .price-box {
+
     background-color: #e0e7ff;
     padding: 20px;
     border: 2px dashed #7c3aed;
@@ -87,19 +98,22 @@
     margin-bottom: 25px;
 }
 
-.price-box h3{
+.price-box h3 {
+
     color: #1e1b4b;
     font-size: 18px;
     margin-bottom: 15px;
 }
 
-.price-box .total-harga{
+.price-box .total-harga {
+
     font-size: 32px;
     font-weight: bold;
     color: #7c3aed;
 }
 
 .btn-submit {
+
     width: 100%;
     background-color: #7c3aed;
     color: white;
@@ -113,10 +127,12 @@
 }
 
 .btn-submit:hover {
+
     background-color: #6d28d9;
 }
 
 .error-msg {
+
     color: #ef4444;
     font-size: 13px;
     margin-top: 5px;
@@ -125,6 +141,7 @@
 }
 
 .success-box {
+
     background-color: #dcfce7;
     border: 1px solid #22c55e;
     color: #15803d;
@@ -133,4 +150,17 @@
     text-align: center;
     margin-bottom: 20px;
     display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:768px){
+
+    .container{
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .form-section{
+        padding: 20px;
+    }
 }
