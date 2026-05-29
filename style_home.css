@@ -1,11 +1,6 @@
 /* ==========================================
    KONTEN UTAMA & BANNER
    ========================================== */
-
-main {
-    flex: 3;
-}
-
 .banner-utama {
     display: flex;
     justify-content: space-between;

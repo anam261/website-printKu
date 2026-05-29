@@ -184,21 +184,3 @@
     display: none;                /* Sembunyikan kotak secara default (baru muncul via JavaScript jika sukses) */
 }
 
-/* ==========================================
-   7. RESPONSIVE DESIGN (MOBILE LAYOUT)
-   ========================================== */
-
-/* Aturan CSS khusus untuk layar HP/Tablet dengan lebar maksimal 768px */
-@media screen and (max-width: 768px) {
-
-    /* Mengubah susunan kontainer utama */
-    .container {
-        flex-direction: column;   /* Mengubah susunan elemen di dalam container menjadi berbaris ke bawah (vertikal) */
-        padding: 15px;            /* Memperkecil ruang dalam kontainer di layar HP */
-    }
-
-    /* Mengubah ruang dalam kotak form di layar HP */
-    .form-section {
-        padding: 20px;            /* Mengurangi padding dari 35px menjadi 20px agar hemat ruang layar */
-    }
-}

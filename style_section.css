@@ -23,6 +23,7 @@ body{
 	display:flex;
 	gap:20px;
 	padding:30px;
+	align-items:flex-start;
 }
 
 /* header website */
@@ -44,8 +45,9 @@ header{
 /* Menu Navigasi */
 
 nav{
-	background:rgba(255, 255, 255, 0.7);
+	background:#FFFFFF;
 	padding:15px;
+	box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 nav ul{
@@ -63,6 +65,9 @@ nav ul li a{
 	color:black;
 	font-weight:bold;
 }
+a:hover {
+  color: #00ff00; 
+}
 
 main{
 	flex:3;
@@ -74,13 +79,16 @@ main{
 
 aside{
 	flex:1;
+	display:flex;
+	flex-direction:column;
+	gap:20px;
 }
 
 .box-sidebar{
-	background:#F8F9FA;
-	padding:25px;
+	background:white;
+	padding:20px;
 	border-radius:20px;
-	margin-bottom:20px;
+	box-shadow:0 4px 20px rgba(0,0,0,0.1);
 }
 
 .box-sidebar h3{
@@ -118,4 +126,23 @@ footer{
 	margin-bottom:20px;
 	line-height:1.8;
 	color:#475569;
+}
+
+/* ==========================================
+   7. RESPONSIVE DESIGN (MOBILE LAYOUT)
+   ========================================== */
+
+/* Aturan CSS khusus untuk layar HP/Tablet dengan lebar maksimal 768px */
+@media screen and (max-width: 768px) {
+
+    /* Mengubah susunan kontainer utama */
+    .container {
+        flex-direction: column;   /* Mengubah susunan elemen di dalam container menjadi berbaris ke bawah (vertikal) */
+        padding: 15px;            /* Memperkecil ruang dalam kontainer di layar HP */
+    }
+
+    /* Mengubah ruang dalam kotak form di layar HP */
+    .form-section {
+        padding: 20px;            /* Mengurangi padding dari 35px menjadi 20px agar hemat ruang layar */
+    }
 }

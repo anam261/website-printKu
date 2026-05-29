@@ -1,11 +1,10 @@
+/*Pembunkus conten*/
 .about-container{
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    margin: 20px;
-    display: flex;
-    gap: 20px;
+	background:white;
+	padding:30px;
+	border-radius:20px;
+	box-shadow:0 4px 20px rgba(0,0,0,0.1);
+	flex:3;
 }
 
 /* =========================
@@ -49,22 +48,3 @@
     background-color: #f8fafc;
 }
 
-/* =========================
-   RESPONSIVE MOBILE
-========================= */
-
-@media screen and (max-width:768px){
-
-    .about-container{
-        flex-direction: column;
-    }
-
-    .content-table{
-        font-size: 13px;
-    }
-
-    .content-table th,
-    .content-table td{
-        padding: 10px;
-    }
-}
