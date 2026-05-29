@@ -58,28 +58,28 @@
 					<form id="orderForm">
 						<!-- 1. Input Nama Pelanggan -->
 						<div class="form-group">
-							<label>Nama pelanggan:</label>
+							<label for="custName">Nama pelanggan:</label>
 							<input type="text" id="custName" name="custName" placeholder="Masukkan nama Anda">
 							<span id="errName" class="error-msg"></span>
 						</div>
 
 						<!-- 2. Input Nomor Telepon -->
 						<div class="form-group">
-							<label>Nomor Telepon:</label>
+							<label for="custNotel">Nomor Telepon:</label>
 							<input type="text" id="custNotel" name="custNotel" placeholder="Masukkan nomor Anda">
 							<span id="errNotel" class="error-msg"></span>
 						</div>
 
 						<!-- 3. Input Email -->
 						<div class="form-group">
-							<label>Email:</label>
+							<label for="custEmail">Email:</label>
 							<input type="text" id="custEmail" placeholder="email@example.com">
 							<span id="errEmail" class="error-msg"></span>
 						</div>
 
 						<!-- 4. Dropdown: Jenis Cetakan -->
 						<div class="form-group">
-							<label>Jenis Cetakan:</label>
+							<label for="jenisCetak">Jenis Cetakan:</label>
 							<select name="jenisCetak" id="jenisCetak" onchange="hitungTotal()">
 								<option value="">Pilih Jenis</option>
 								<option value="5000">Stiker (Rp 5.000/pcs)</option>
@@ -93,7 +93,7 @@
 
 						<!-- 5. Dropdown: Ukuran Cetakan -->
 						<div class="form-group">
-							<label>Ukuran Cetakan:</label>
+							<label for="ukuranCetak">Ukuran Cetakan:</label>
 							<select name="ukuranCetak" id="ukuranCetak" onchange="hitungTotal()">
 								<option value="">Pilih Ukuran</option>
 								<option value="1">3x3 cm (Harga Normal)</option>
@@ -114,7 +114,7 @@
 
 						<!-- 7. Input File -->
 						<div class="form-group">
-							<label for="jumlah">Upload Desain Anda (.jpg, .png, .pdf):</label>
+							<label for="file">Upload Desain Anda (.jpg, .png, .pdf):</label>
 							<input type="file" id="File" name="File">
 							<span id="errFile" class="error-msg"></span>
 						</div>
@@ -151,7 +151,7 @@
 
 						<!-- 10. Textarea: Catatan Tambahan -->
 						<div class="form-group">
-							<label>Catatan Tambahan:</label>
+							<label for="catatan">Catatan Tambahan:</label>
 							<textarea name="catatan" id="catatan" rows="4" placeholder=""></textarea>
 						</div>
 
