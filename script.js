@@ -30,7 +30,7 @@ const formPesanan = document.getElementById("orderForm");
 if(formPesanan) {
     formPesanan.addEventListener("submit", function (e) {
         e.preventDefault();
-
+//
         // 1. Mengambil value dari masing-masing inputan HTML
         const nama = document.getElementById("custName").value.trim();
         const email = document.getElementById("custEmail").value.trim();
@@ -58,7 +58,7 @@ if(formPesanan) {
         if (nama === "") {
             document.getElementById("errName").innerText = "*Nama pelanggan wajib diisi.";
             adaError = true;
-        } else if (!NameValidate(nama)) { // 👈 "Jika NAMA TIDAK VALID..."
+        } else if (!NameValidate(nama)) { //  "Jika NAMA TIDAK VALID..."
             document.getElementById("errName").innerText = "*Nama hanya boleh berisi huruf alfabet.";
             adaError = true;
         }
@@ -67,7 +67,7 @@ if(formPesanan) {
         if (email === "") {
             document.getElementById("errEmail").innerText = "*Email pelanggan wajib diisi.";
             adaError = true;
-        } else if (!EmailValidate(email)) { // 👈 "Jika EMAIL TIDAK VALID..."
+        } else if (!EmailValidate(email)) { //  "Jika EMAIL TIDAK VALID..."
             document.getElementById("errEmail").innerText = "*Format email tidak valid (Contoh: james@gmail.com).";
             adaError = true;
         }
@@ -76,7 +76,7 @@ if(formPesanan) {
         if (notel === "") {
             document.getElementById("errNotel").innerText = "*Nomor telepon wajib diisi.";
             adaError = true;
-        } else if (!NotelValidate(notel)) { // 👈 "Jika NOTEL TIDAK VALID..."
+        } else if (!NotelValidate(notel)) { //  "Jika NOTEL TIDAK VALID..."
             document.getElementById("errNotel").innerText = "*Nomor telepon harus angka murni (10-14).";
             adaError = true;
         }
@@ -97,7 +97,7 @@ if(formPesanan) {
         if (Jumlah === "") {
             document.getElementById("errJumlah").innerText = "*Jumlah pesanan wajib diisi.";
             adaError = true;
-        } else if (!JumlahValidate(Jumlah)) { // 👈 "Jika JUMLAH TIDAK VALID..."
+        } else if (!JumlahValidate(Jumlah)) { //  "Jika JUMLAH TIDAK VALID..."
             document.getElementById("errJumlah").innerText = "*Jumlah harus angka murni dan lebih dari 0.";
             adaError = true;
         }
