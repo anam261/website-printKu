@@ -111,8 +111,13 @@ if(formPesanan) {
 
         // 4. Hasil Akhir
         if (!adaError) {
+            // Menampilkan kotak hijau sukses
             if(successBox) successBox.style.display = "block";
+
+            // Mnegosongkan isian form
             formPesanan.reset();
+            
+            // Reset harga kembali ke 0
             const tampilHarga = document.getElementById("tampilHarga");
             if(tampilHarga) tampilHarga.innerText = "Rp 0";
         }
