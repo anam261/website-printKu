@@ -1,5 +1,5 @@
 // ==========================================
-// Bagian 1: Fungsi Validasi Modular (Sudah Jujur)
+// Bagian 1: Fungsi Validasi Modular 
 // ==========================================
 function NameValidate(nama) {
     const regex = /^[a-zA-Z\s]+$/;
