@@ -29,8 +29,9 @@ const formPesanan = document.getElementById("orderForm");
 
 if(formPesanan) {
     formPesanan.addEventListener("submit", function (e) {
+        // Mencegah halaman ter-refresh otomatis saat disubmit
         e.preventDefault();
-//
+
         // 1. Mengambil value dari masing-masing inputan HTML
         const nama = document.getElementById("custName").value.trim();
         const email = document.getElementById("custEmail").value.trim();
