@@ -29,9 +29,8 @@ const formPesanan = document.getElementById("orderForm");
 
 if(formPesanan) {
     formPesanan.addEventListener("submit", function (e) {
-        // Mencegah halaman ter-refresh otomatis saat disubmit
         e.preventDefault();
-
+//
         // 1. Mengambil value dari masing-masing inputan HTML
         const nama = document.getElementById("custName").value.trim();
         const email = document.getElementById("custEmail").value.trim();
@@ -42,14 +41,6 @@ if(formPesanan) {
         const fileUpload = document.getElementById("File").value;
 
         console.log(nama)
-        console.log(email)
-        console.log(notel)
-        console.log(jenis)
-        console.log(ukuran)
-        console.log(Jumlah)
-        console.log(fileUpload)
-        console.log(successBox)
-
 
         // 2. Membersihkan pesan error sebelumnya
         const idsError = ['errName', 'errEmail', 'errNotel', 'errJenis', 'errUkuran', 'errJumlah', 'errFile'];
@@ -121,29 +112,27 @@ if(formPesanan) {
 
         // 4. Hasil Akhir
         if (!adaError) {
-            // Menampilkan kotak hijau sukses
             if(successBox) successBox.style.display = "block";
-
-            // Mnegosongkan isian form
             formPesanan.reset();
-            
-            // Reset harga kembali ke 0
             const tampilHarga = document.getElementById("tampilHarga");
             if(tampilHarga) tampilHarga.innerText = "Rp 0";
         }
     })
 }
-
-   
+    console.log(nama)
+  
 // ==========================================
 // Bagian 3: Menghitung Total Harga Otomatis
 // ==========================================
 function hitungTotal() {
+    //mengambil nilai dasar berdasarkan jenis cetak
     let hargaDasar = parseInt(document.getElementById("jenisCetak").value) || 0;
+    //mengambil angka pengali berdasarkan angka yang dipilih
     let pengaliUkuran = parseFloat(document.getElementById("ukuranCetak").value) || 0;
+    //mengmabil text jumlah lembar yang di pilih unser lalu mengubah nya menjadi angka bulat
     let jumlahText = document.getElementById("jumlah").value;
     let hasil = parseInt(jumlahText) || 0;
-
+    //Mengambil semua elemen radio button dengan nama "laminasi".
     let radiosLaminasi = document.getElementsByName("laminasi");
     let hargaLaminasi = 0;
     for(let i = 0; i < radiosLaminasi.length; i++) {
@@ -152,15 +141,15 @@ function hitungTotal() {
             break;
         }
     }
-
+    //mengambbil semua fitur tambahan yang dicentang oleh unser lalu dijumlahkan semuanya
     let checkboxesFitur = document.querySelectorAll('input[type="checkbox"]:checked');
     let totalFitur = 0;
     checkboxesFitur.forEach(function(cb) {
         totalFitur += parseInt(cb.value);
     });
-    
+    //melakukan kalkulasi akhir mengunakan rumus mmatematika
     let totalHarga = (hargaDasar * pengaliUkuran * hasil) + hargaLaminasi + totalFitur;
-
+    //Mengubah angka total harga menjadi format mata uang Rupiah yang rapi (ada titik ribuan) dan langsung memunculkannya di halaman web agar bisa dilihat oleh pelanggan.
     const tampilHarga = document.getElementById("tampilHarga");
     if(tampilHarga) {
         tampilHarga.innerText = "Rp " + totalHarga.toLocaleString('id-ID');
