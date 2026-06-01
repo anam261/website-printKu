@@ -41,6 +41,16 @@ if(formPesanan) {
         const Jumlah = document.getElementById("jumlah").value.trim();
         const fileUpload = document.getElementById("File").value;
 
+        console.log(nama)
+        console.log(email)
+        console.log(notel)
+        console.log(jenis)
+        console.log(ukuran)
+        console.log(Jumlah)
+        console.log(fileUpload)
+        console.log(successBox)
+
+
         // 2. Membersihkan pesan error sebelumnya
         const idsError = ['errName', 'errEmail', 'errNotel', 'errJenis', 'errUkuran', 'errJumlah', 'errFile'];
         idsError.forEach(id => {
@@ -124,6 +134,7 @@ if(formPesanan) {
     })
 }
 
+   
 // ==========================================
 // Bagian 3: Menghitung Total Harga Otomatis
 // ==========================================
