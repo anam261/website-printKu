@@ -20,7 +20,7 @@ function JumlahValidate(Jumlah) {
     const regexAngka = /^[0-9]+$/;
     // TRUE jika dia angka murni DAN nilainya di atas 0
     return regexAngka.test(Jumlah) && parseInt(Jumlah) > 0;
-}
+}   
 
 // ==========================================
 // Bagian 2: Event Listener untuk Submit Form
@@ -40,7 +40,7 @@ if(formPesanan) {
         const Jumlah = document.getElementById("jumlah").value.trim();
         const fileUpload = document.getElementById("File").value;
 
-        console.log(nama)
+        
 
         // 2. Membersihkan pesan error sebelumnya
         const idsError = ['errName', 'errEmail', 'errNotel', 'errJenis', 'errUkuran', 'errJumlah', 'errFile'];
@@ -119,7 +119,7 @@ if(formPesanan) {
         }
     })
 }
-    console.log(nama)
+   
   
 // ==========================================
 // Bagian 3: Menghitung Total Harga Otomatis
